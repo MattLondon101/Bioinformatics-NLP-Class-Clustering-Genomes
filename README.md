@@ -132,7 +132,22 @@ bit score           0.793438          0.944639  ...     NaN   1.000000
 Run `KmeanuetteIt.py` to use K-Means and Silhouette analysis to measure distance between clusters (Silhouette score) and generate K-Means cluster graphs
 
 ## Calculate Cluster Classes with Principal Component Analysis (PCA)
-Run `PCA_Viz.py` to use principal component analysis (PCA) to distinguish cluster classes
+```
+covar_matrix = np.matmul(standardized_data.T , standardized_data)
+values, vectors = eigh(covar_matrix, eigvals=(9,10))
+vectors = vectors.T
+new_coordinates = np.matmul(vectors, standardized_data.T)
+new_coordinates = np.vstack((new_coordinates)).T
+df = pd.DataFrame(data=new_coordinates, columns=("1st_principal", "2nd_principal"))
+sns.set()
+sns.FacetGrid(df, size=6).map(plt.scatter, '1st_principal', '2nd_principal').add_legend()
+plt.title('PCA visualization of sequences')
+plt.show()
+```
+
+
+![5 distinct classes of genome sequence clusters found via PCA](https://github.com/MattLondon101/Images/blob/master/pca1.png)
+
 
 
 
