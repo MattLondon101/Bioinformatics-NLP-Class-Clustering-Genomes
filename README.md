@@ -3,9 +3,8 @@
 ## The primary goal of this code is to predict the evolution of COVID-19, to aid in treatments and vaccines.
 
 Notice 3/27/2020: This repository is Under Construction
-As of this date is covers Human COVID-19 vs Bat COVID-19 genome comparison and similar class grouping with K-Means, Silloutte    Analysis and Principal Component Analysis (PCA)
 
-Genome sequencing with deep learning and other artificial intelligence methods.
+As of 3/27/2020, until further notice, it covers Human COVID-19 vs Bat COVID-19 genome comparison and similar class grouping with K-Means, Silloutte Analysis and Principal Component Analysis (PCA).
 
 This code has been successfully implemented with Spyder(Python 3.7) in Windows 10 OS.
 
