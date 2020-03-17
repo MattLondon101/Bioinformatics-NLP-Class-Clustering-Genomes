@@ -27,9 +27,7 @@ cv19=str(seq_record.seq)
 ```
 # returns a L x 4 numpy array
 one_hot_encoder(string_to_array(cv19))
-```
-```
-# Data will print as array
+# Output:
 array([[1, 0, 0, 0],
        [0, 0, 0, 1],
        [0, 0, 0, 1],
