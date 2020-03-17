@@ -1,4 +1,6 @@
 # COVID-19-Genome-Sequencing-and-Predictions-with-Artificial-Intelligence
+# Notice 3/27/2020: This repository is Under Construction
+
 Genome sequencing with deep learning and other artificial intelligence methods.
 
 This code has been successfully implemented with Spyder(Python 3.7) in Windows 10 OS.
