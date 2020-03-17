@@ -79,7 +79,29 @@ alignHit=alignHit.rename(columns={"MN997409.1": "query acc.ver", "MN997409.1.1":
                             "0.1":"gap opens","1":"q. start","29882.1":"q. end","1.1":"s. start",
                            "29882.2	":"s. end","0.0":"evalue","55182":"bit score"})
 ```
+Put data back in first row
+```
+alignHit = alignHit.append(pd.Series(['MN997409.1',	'MN997409.1.1',	
+                    100.000,	29882,	
+                    0,	0.1,	1,	29882.1,	
+                    1.1,	29882.2,	0.0,	55182], index=alignHit.columns), ignore_index=True)
+```
+Describe the data
+```
+ah=alignHit
+ah.describe()
 
+# Output
+       % identity  alignment length  ...  evalue    bit score
+count  263.000000        263.000000  ...   263.0    263.00000
+mean    86.064958      10711.114068  ...     0.0  14240.34981
+std      7.609654      10530.955700  ...     0.0  19226.72192
+min     77.559000       1603.000000  ...     0.0   1011.00000
+25%     80.048000       1925.000000  ...     0.0   2101.00000
+50%     82.304000       5417.000000  ...     0.0   3936.00000
+75%     90.189000      17716.000000  ...     0.0  15175.00000
+max    100.000000      29882.000000  ...     0.0  55182.00000
+```
 
 
 
