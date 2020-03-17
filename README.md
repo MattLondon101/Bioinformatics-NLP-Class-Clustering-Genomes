@@ -145,7 +145,7 @@ plt.title('PCA visualization of sequences')
 plt.show()
 ```
 
-
+5 distinct classes of genome sequence clusters found via PCA
 ![5 distinct classes of genome sequence clusters found via PCA](https://github.com/MattLondon101/Images/blob/master/pca1.png)
 
 
