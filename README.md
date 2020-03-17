@@ -23,4 +23,9 @@ for seq_record in SeqIO.parse('./sars_coronavirus_accession_Kaggle/SARS_CORONAVI
 cv19=str(seq_record.seq)
 ```
 
+4. One-hot encode genome string. Non "acgt" bases (n) are 0000.
+```
+# returns a L x 4 numpy array
+one_hot_encoder(string_to_array(cv19))
+```
 
