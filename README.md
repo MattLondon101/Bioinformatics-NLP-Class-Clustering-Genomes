@@ -15,16 +15,23 @@ The primary goal of this code is to predict the evolution of COVID-19, to aid in
 
 3. Parse and convert to string the genome data in `.fasta` files. In this case:
 ```
-# Parse and print genome
+# Parse and print genomes and convert to strings
+# Human COVID-19
 for seq_record in SeqIO.parse('./sars_coronavirus_accession_Kaggle/SARS_CORONAVIRUS_NC_045512_sequence.fasta',"fasta"):
     print(seq_record.id)
     print(seq_record.seq)
-```
-```
+    
 # Convert sequence to string 
 cv19=str(seq_record.seq)
-```
 
+# Bat COVID-19
+for seq_record in SeqIO.parse('./sars_coronavirus_accession_Kaggle/BAT_SARS_LIKE_coronavirus_complete_genome_sequence.fasta',"fasta"):
+    print(seq_record.id)
+    print(seq_record.seq)
+    
+# Convert sequence to string 
+bat19=str(seq_record.seq)
+```
 ### Two ways to encode genome sequences
 
 1. One-hot encode genome string. Non "acgt" bases (n) are 0000.
@@ -102,7 +109,23 @@ min     77.559000       1603.000000  ...     0.0   1011.00000
 75%     90.189000      17716.000000  ...     0.0  15175.00000
 max    100.000000      29882.000000  ...     0.0  55182.00000
 ```
+Correlate Human and Bat Virus
+```
+ah.corr()
 
+# Output
+                  % identity  alignment length  ...  evalue  bit score
+% identity          1.000000          0.631524  ...     NaN   0.793438
+alignment length    0.631524          1.000000  ...     NaN   0.944639
+mismatches         -0.453509          0.206680  ...     NaN  -0.125766
+gap opens          -0.535174          0.136714  ...     NaN  -0.193213
+q. start           -0.052519         -0.560720  ...     NaN  -0.502689
+q. end              0.566794          0.355570  ...     NaN   0.367344
+s. start           -0.051870         -0.560761  ...     NaN  -0.502181
+29882.2             0.569653          0.359521  ...     NaN   0.371660
+evalue                   NaN               NaN  ...     NaN        NaN
+bit score           0.793438          0.944639  ...     NaN   1.000000
+```
 
 
 
