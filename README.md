@@ -5,6 +5,9 @@ This code has been successfully implemented with Spyder(Python 3.7) in Windows 1
 
 The primary goal of this code is to predict the evolution of COVID-19, to aid in treatments and vaccines.
 
+## Instructions
+
+
 
 
 
