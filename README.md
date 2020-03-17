@@ -27,6 +27,7 @@ cv19=str(seq_record.seq)
 ```
 # returns a L x 4 numpy array
 one_hot_encoder(string_to_array(cv19))
+
 # Output:
 array([[1, 0, 0, 0],
        [0, 0, 0, 1],
@@ -36,5 +37,23 @@ array([[1, 0, 0, 0],
        [1, 0, 0, 0],
        [1, 0, 0, 0]], dtype=int32)
 ```
+
+5. Convert sequence (string) to overlapping k-mer words:
+```
+words=getKmers(cv19,size=6)
+sentence = ' '.join(words)
+
+# Print k-mer words:
+sentence
+
+# Output
+'attaaa ttaaag taaagg aaaggt aaggtt aggttt ggttta gtttat tttata ttatac tatacc atacct tacctt accttc ccttcc cttccc ttccca tcccag cccagg ccaggt caggta aggtaa ggtaac gtaaca taacaa aacaaa acaaac caaacc aaacca aaccaa accaac ccaacc caacca aaccaa accaac ccaact caactt aacttt actttc ctttcg tttcga ttcgat....'
+```
+
+
+
+
+
+
 
 
