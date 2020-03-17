@@ -128,9 +128,11 @@ evalue                   NaN               NaN  ...     NaN        NaN
 bit score           0.793438          0.944639  ...     NaN   1.000000
 ```
 
-## Run `KmeanuetteIt.py` to use K-Means and Silhouette analysis to measure distance between clusters (Silhouette score) and generate K-Means cluster graphs
+## K-Means Clustering and Silhouette Analysis
+Run `KmeanuetteIt.py` to use K-Means and Silhouette analysis to measure distance between clusters (Silhouette score) and generate K-Means cluster graphs
 
-## Run PCA_Viz.py to use principal component analysis (PCA) to distinguish cluster classes
+## Calculate Cluster Classes with Principal Component Analysis (PCA)
+`Run PCA_Viz.py` to use principal component analysis (PCA) to distinguish cluster classes
 
 
 
