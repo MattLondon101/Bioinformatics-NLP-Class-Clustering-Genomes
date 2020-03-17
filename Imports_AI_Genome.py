@@ -1,5 +1,6 @@
 # Bio = biopython
 from Bio import SeqIO
+from sklearn.cluster import KMeans
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
