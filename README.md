@@ -65,6 +65,7 @@ caactt aacttt actttc ctttcg tttcga ttcgat....'
 ```
 
 ### Comparing genomes
+### This example: Human COVID-19 vs. Bat COVID-19
 Read the Alignment-Hit Table
 ```
 alignHit=pd.read_csv('./sars_coronavirus_accession_Kaggle/MN997409.1-4NY0T82X016-Alignment-HitTable.csv')
