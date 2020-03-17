@@ -11,7 +11,16 @@ The primary goal of this code is to predict the evolution of COVID-19, to aid in
 
 2. COVID-19 genome sequences can be downloaded from [Kaggle](https://www.kaggle.com/jamzing/sars-coronavirus-accession/tasks?taskId=458).
 
-
-
+3. Parse and convert to string the genome data in `.fasta` files. In this case:
+```
+# Parse and print genome
+for seq_record in SeqIO.parse('./sars_coronavirus_accession_Kaggle/SARS_CORONAVIRUS_NC_045512_sequence.fasta',"fasta"):
+    print(seq_record.id)
+    print(seq_record.seq)
+```
+```
+# Convert sequence to string 
+cv19=str(seq_record.seq)
+```
 
 
