@@ -9,6 +9,8 @@ The primary goal of this code is to predict the evolution of COVID-19, to aid in
 
 1. Run `Imports_AI_Genome.py` and `Encoding-Genome-Functions.py` for imports and functions. 
 
+2. COVID-19 genome sequences can be downloaded from [Kaggle](https://www.kaggle.com/jamzing/sars-coronavirus-accession/tasks?taskId=458).
+
 
 
 
