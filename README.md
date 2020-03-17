@@ -7,7 +7,8 @@ The primary goal of this code is to predict the evolution of COVID-19, to aid in
 
 ## Instructions
 
-Run `Imports_AI_Genome.py` and `Encoding-Genome-Functions.py` for imports and functions. 
+1. Run `Imports_AI_Genome.py` and `Encoding-Genome-Functions.py` for imports and functions. 
+
 
 
 
