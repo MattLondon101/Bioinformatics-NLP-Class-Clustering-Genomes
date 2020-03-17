@@ -57,6 +57,29 @@ taacaa aacaaa acaaac caaacc aaacca aaccaa accaac ccaacc caacca aaccaa accaac cca
 caactt aacttt actttc ctttcg tttcga ttcgat....'
 ```
 
+### Comparing genomes
+Read the Alignment-Hit Table
+```
+alignHit=pd.read_csv('./sars_coronavirus_accession_Kaggle/MN997409.1-4NY0T82X016-Alignment-HitTable.csv')
+alignHit.head()
+
+# Output
+   MN997409.1 MN997409.1.1  100.000  29882  ...  1.1  29882.2  0.0  55182
+0  MN997409.1   MT020881.1   99.990  29882  ...    1    29882  0.0  55166
+1  MN997409.1   MT020880.1   99.990  29882  ...    1    29882  0.0  55166
+2  MN997409.1   MN985325.1   99.990  29882  ...    1    29882  0.0  55166
+3  MN997409.1   MN975262.1   99.990  29882  ...    1    29882  0.0  55166
+4  MN997409.1   LC522974.1   99.993  29878  ...    1    29878  0.0  55164
+'''
+
+Rename Columns
+```
+alignHit=alignHit.rename(columns={"MN997409.1": "query acc.ver", "MN997409.1.1": "subject acc.ver",
+                            "100.000":"% identity","29882":"alignment length","0":"mismatches",
+                            "0.1":"gap opens","1":"q. start","29882.1":"q. end","1.1":"s. start",
+                           "29882.2	":"s. end","0.0":"evalue","55182":"bit score"})
+```
+
 
 
 
