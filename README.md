@@ -1,4 +1,4 @@
-# COVID-19, USA cases, class clustering via feature extraction
+# Class Clustering COVID-19 Cases Across USA States With Feature Extraction Techniques
 
 Alignment hit table, comparing genes of 2019-nCoV/USA from various States, grouped into classes with K-Means, Silloutte Analysis and Principal Component Analysis (PCA).
 
