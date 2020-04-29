@@ -4,62 +4,11 @@ Alignment hit table, comparing genes of 2019-nCoV/USA from various States, group
 
 This code has been successfully implemented with Spyder(Python 3.7) in Windows 10 OS.
 
-## Instructions
+## Setup
 
 1. Run `Imports_AI_Genome.py` and `Encoding-Genome-Functions.py` for imports and functions. 
 
-2. COVID-19 genome sequences can be downloaded from [Kaggle](https://www.kaggle.com/jamzing/sars-coronavirus-accession/tasks?taskId=458).
-
-3. Parse and convert to string the genome data in `.fasta` files. In this case:
-```
-# Parse and print genomes and convert to strings
-# Human COVID-19
-for seq_record in SeqIO.parse('./sars_coronavirus_accession_Kaggle/SARS_CORONAVIRUS_NC_045512_sequence.fasta',"fasta"):
-    print(seq_record.id)
-    print(seq_record.seq)
-    
-# Convert sequence to string 
-cv19=str(seq_record.seq)
-
-# Bat COVID-19
-for seq_record in SeqIO.parse('./sars_coronavirus_accession_Kaggle/BAT_SARS_LIKE_coronavirus_complete_genome_sequence.fasta',"fasta"):
-    print(seq_record.id)
-    print(seq_record.seq)
-    
-# Convert sequence to string 
-bat19=str(seq_record.seq)
-```
-### Two ways to encode genome sequences
-
-1. One-hot encode genome string. Non "acgt" bases (n) are 0000.
-```
-# returns a L x 4 numpy array
-one_hot_encoder(string_to_array(cv19))
-
-# Output:
-array([[1, 0, 0, 0],
-       [0, 0, 0, 1],
-       [0, 0, 0, 1],
-       ...,
-       [1, 0, 0, 0],
-       [1, 0, 0, 0],
-       [1, 0, 0, 0]], dtype=int32)
-```
-
-2. Convert sequence (string) to overlapping k-mer words:
-```
-words=getKmers(cv19,size=6)
-sentence = ' '.join(words)
-
-# Print k-mer words:
-sentence
-
-# Output
-'attaaa ttaaag taaagg aaaggt aaggtt aggttt ggttta gtttat tttata ttatac tatacc atacct 
-tacctt accttc ccttcc cttccc ttccca tcccag cccagg ccaggt caggta aggtaa ggtaac gtaaca 
-taacaa aacaaa acaaac caaacc aaacca aaccaa accaac ccaacc caacca aaccaa accaac ccaact 
-caactt aacttt actttc ctttcg tttcga ttcgat....'
-```
+2. COVID-19 genome sequences and alignment hit table can be downloaded from [Kaggle](https://www.kaggle.com/jamzing/sars-coronavirus-accession/tasks?taskId=458).
 
 ### Comparing genomes
 ### This example: 2019-nCoV/USA across States
@@ -107,7 +56,7 @@ min     77.559000       1603.000000  ...     0.0   1011.00000
 75%     90.189000      17716.000000  ...     0.0  15175.00000
 max    100.000000      29882.000000  ...     0.0  55182.00000
 ```
-Correlate Human and Bat Virus
+Correlate Genes
 ```
 ah.corr()
 
@@ -142,7 +91,7 @@ plt.title('PCA visualization of sequences')
 plt.show()
 ```
 
-5 distinct classes of genome sequence clusters found via PCA
+5 distinct classes of genome sequence clusters, across USA, found via PCA
 ![5 distinct classes of genome sequence clusters found via PCA](https://github.com/MattLondon101/Images/blob/master/pca1.png)
 
 
