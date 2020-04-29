@@ -1,4 +1,4 @@
-# COVID-19-Genome-Sequencing-and-Predictions-with-Artificial-Intelligence
+# COVID-19, USA cases, class clustering via feature extraction
 
 Alignment hit table, comparing genes of 2019-nCoV/USA from various States, grouped into classes with K-Means, Silloutte Analysis and Principal Component Analysis (PCA).
 
