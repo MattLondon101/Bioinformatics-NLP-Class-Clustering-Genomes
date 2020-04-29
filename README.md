@@ -1,4 +1,4 @@
-# Class Clustering COVID-19 Cases Across USA States With Feature Extraction Techniques
+# Class Clustering COVID-19 Subtypes With Feature Extraction Techniques
 
 Alignment hit table, comparing genes of 2019-nCoV/USA from various States, grouped into classes with K-Means, Silloutte Analysis and Principal Component Analysis (PCA).
 
@@ -11,7 +11,7 @@ This code has been successfully implemented with Spyder(Python 3.7) in Windows 1
 2. COVID-19 genome sequences and alignment hit table can be downloaded from [Kaggle](https://www.kaggle.com/jamzing/sars-coronavirus-accession/tasks?taskId=458).
 
 ### Comparing genomes
-### This example: 2019-nCoV/USA across States
+### This example: 2019-nCoV Subtypes
 Read the Alignment-Hit Table
 ```
 alignHit=pd.read_csv('./sars_coronavirus_accession_Kaggle/MN997409.1-4NY0T82X016-Alignment-HitTable.csv')
@@ -91,7 +91,7 @@ plt.title('PCA visualization of sequences')
 plt.show()
 ```
 
-5 distinct classes of genome sequence clusters, across USA, found via PCA
+5 distinct classes of genome sequence subtype clusters found via PCA
 ![5 distinct classes of genome sequence clusters found via PCA](https://github.com/MattLondon101/Images/blob/master/pca1.png)
 
 
