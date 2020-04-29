@@ -1,4 +1,4 @@
-# Class Clustering COVID-19 Subtypes With Feature Extraction
+# Class Clustering COVID-19 Genome Subtypes With Feature Extraction
 Alignment hit table, comparing genes of 2019-nCoV subtypes, grouped into classes with K-Means, Silloutte Analysis and Principal Component Analysis (PCA).
 
 This code has been successfully implemented with Spyder(Python 3.7) in Windows 10 OS.
