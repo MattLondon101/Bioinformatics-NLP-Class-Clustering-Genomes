@@ -11,10 +11,14 @@ This code has been successfully implemented with Spyder(Python 3.7) in Windows 1
 
 ### Comparing genomes
 ### This example: 2019-nCoV Subtypes
-Read the Alignment-Hit Table
+Read Alignment Hit Table CSV, Rename Columns, Put data back in first row, View first five rows.
 ```
-alignHit=pd.read_csv('./sars_coronavirus_accession_Kaggle/MN997409.1-4NY0T82X016-Alignment-HitTable.csv')
-alignHit.head()
+align_hit = pd.read_csv('sars_coronavirus_accession/MN997409.1-4NY0T82X016-Alignment-HitTable.csv')
+ah = align_hit
+ah.columns = pd.MultiIndex.from_tuples(zip(["query acc.ver", "subject acc.ver", "% identity", "alignment length", 
+                                            "mismatches", "gap opens", "q. start", "q. end", "s. start", "s. end",
+                                            "evalue", "bit score"]))
+ah.head()
 
 # Output
    MN997409.1 MN997409.1.1  100.000  29882  ...  1.1  29882.2  0.0  55182
