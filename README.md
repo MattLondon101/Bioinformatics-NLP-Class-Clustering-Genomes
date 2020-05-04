@@ -28,26 +28,11 @@ ah.head()
 3  MN997409.1   MN975262.1   99.990  29882  ...    1    29882  0.0  55166
 4  MN997409.1   LC522974.1   99.993  29878  ...    1    29878  0.0  55164
 ```
-
-Rename Columns
-```
-alignHit=alignHit.rename(columns={"MN997409.1": "query acc.ver", "MN997409.1.1": "subject acc.ver",
-                            "100.000":"% identity","29882":"alignment length","0":"mismatches",
-                            "0.1":"gap opens","1":"q. start","29882.1":"q. end","1.1":"s. start",
-                           "29882.2	":"s. end","0.0":"evalue","55182":"bit score"})
-```
-Put data back in first row
-```
-alignHit = alignHit.append(pd.Series(['MN997409.1',	'MN997409.1.1',	
-                    100.000,	29882,	
-                    0,	0.1,	1,	29882.1,	
-                    1.1,	29882.2,	0.0,	55182], index=alignHit.columns), ignore_index=True)
-```
 Describe the data
 ```
-ah=alignHit
 ah.describe()
-
+```
+```
 # Output
        % identity  alignment length  ...  evalue    bit score
 count  263.000000        263.000000  ...   263.0    263.00000
