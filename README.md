@@ -19,8 +19,7 @@ ah.columns = pd.MultiIndex.from_tuples(zip(["query acc.ver", "subject acc.ver", 
                                             "mismatches", "gap opens", "q. start", "q. end", "s. start", "s. end",
                                             "evalue", "bit score"]))
 ah.head()
-
-# Output
+```
    MN997409.1 MN997409.1.1  100.000  29882  ...  1.1  29882.2  0.0  55182
 0  MN997409.1   MT020881.1   99.990  29882  ...    1    29882  0.0  55166
 1  MN997409.1   MT020880.1   99.990  29882  ...    1    29882  0.0  55166
